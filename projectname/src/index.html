@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>快乐购 - 值得信赖的电视购物平台,视频导购,货到付款,正品行货 -美容护肤、数码、家电、服装、家居、运动休闲</title>
+    <meta name="keywords" content="快乐购,快乐购物电视购物,快乐购官方网站,快乐购电视购物,快乐购电视购物直播,快乐购网上商城,湖南快乐购,快乐购物,快乐购电视购物网站,快乐购官网,湖南快乐购电视购物,湖南卫视快乐购">
+    <meta name="description" content="快乐购物股份有限公司官方网站，中国电视购物上市第一股！正品保证，全国配送，便捷支付，让您轻松放心购物！24小时免费订购热线4007051111 4007058800">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        @font-face {
+            font-family: "iconfont";
+            src: url('fonts/iconfont.woff') format('woff')
+        }
+        
+        .iconfont {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ----头部 注册栏 搜索栏 导航栏---- -->
+    <section class="header"></section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <!-- 引入头部文件 -->
+    <script>
+        $('.header').load('public_html/header.html');
+    </script>
+    <!-- ----banner轮播图---- -->
+    <section class="banner">
+        <img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06099619315280930.jpg" style="height:400px;width:100%">
+    </section>
+    <!-- ----main主体部分---- -->
+    <section class="main width1090 clear"></section>
+    <script>
+        $('.main').load('public_html/main.html');
+    </script>
+    <!-- ----滚轮滚过一定距离,顶部出现固定搜索栏---- -->
+    <section class="fixed_top">
+        <div class="width1200">
+            <div class="fixed_img">
+                <img src="img/search_fixed_logo.png">
+            </div>
+            <div class="fixed_input">
+                <i class="icon iconfont iconsearch"></i>
+                <form>
+                    <input type="text" class="text_fixed" placeholder="面膜">
+                    <input type="button" class="btn_fixed" value="搜索">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- ----底部---- -->
+    <section class="footer"></section>
+    <script>
+        $('.footer').load('public_html/footer.html');
+    </script>
+    <!-- ----右边固定栏---- -->
+    <section class="fixed_right"></section>
+    <script>
+        $('.fixed_right').load('public_html/right_fixed.html');
+    </script>
+</body>
+
+</html>

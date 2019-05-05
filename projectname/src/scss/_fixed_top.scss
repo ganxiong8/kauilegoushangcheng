@@ -1,0 +1,54 @@
+@charset "utf-8";
+// 滚轮滚过一定距离,顶部出现固定搜索栏
+.fixed_top {
+    display: none;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    height: 54px;
+    background: #f11323;
+    z-index: 50;
+    .fixed_img {
+        float: left;
+        width: 120px;
+        padding-left: 18px;
+        padding-top: 9px;
+    }
+    .fixed_input {
+        float: left;
+        padding-top: 7px;
+        position: relative;
+        margin-left: 158px;
+        .iconsearch {
+            position: absolute;
+            top: 20px;
+            left: 16px;
+            font-size: 13px;
+            color: #999;
+        }
+        .text_fixed {
+            width: 445px;
+            border: 1px solid #fff;
+            height: 19px;
+            border-radius: 40px;
+            padding: 9px 0 9px 30px;
+            float: left;
+            font-size: 12px;
+            color: #666666;
+            outline: none;
+        }
+        .btn_fixed {
+            border: none;
+            background: #F11323;
+            width: 90px;
+            padding-left: 10px;
+            height: 38px;
+            display: block;
+            float: left;
+            color: #fff;
+            font-size: 16px;
+            text-align: left;
+        }
+    }
+}

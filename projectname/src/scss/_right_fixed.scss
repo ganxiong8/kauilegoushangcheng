@@ -1,0 +1,111 @@
+@charset "utf-8";
+// -----------------右边固定栏------------
+.fixed_right {
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;
+    background-color: #262626;
+    height: 100%;
+    min-height: 600px;
+}
+
+.fixed_right .iconfont {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.fixed_right a {
+    color: #fff;
+}
+
+.fixed_r {
+    height: 100%;
+    position: relative;
+}
+
+// --------------上半部分----------
+.r_f_top {
+    position: absolute;
+    top: 50%;
+    height: 360px;
+    margin-top: -270px;
+    right: 0;
+}
+
+.r_f_top>div {
+    margin: 15px 0;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid #575757;
+    a {
+        display: block;
+        padding-bottom: 25px;
+    }
+}
+
+.r_f_top>div:nth-child(3) {
+    border: 0;
+}
+
+.r_f_top a .number,
+.r_f_top a .collect {
+    width: 39px;
+    padding: 10px 0 0 0;
+    text-align: center;
+}
+
+.r_f_top a .icon_car {
+    text-align: center;
+    line-height: 40px;
+}
+
+.r_f_top a .car {
+    width: 17px;
+    padding: 0 11px;
+}
+
+.r_f_top a .car_num {
+    color: #fff;
+    background: #F31425;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    margin: 14px 0px 0 11px;
+    border-radius: 18px;
+}
+
+.r_f_top a .icon_collect {
+    margin: 0 9px;
+}
+
+// --------------下半部分----------
+.r_f_bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+.r_f_bottom>div {
+    margin: 5px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.r_f_bottom>div a {
+    display: block;
+    line-height: 42px;
+    padding: 5px 0;
+    .ewm_img {
+        margin: 10px;
+    }
+    .online_cus {
+        margin: 5px 0 5px 0;
+    }
+    .retrun_top {
+        font-size: 21px;
+    }
+}

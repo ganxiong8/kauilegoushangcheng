@@ -1,0 +1,228 @@
+@charset "utf-8";
+// -----------------主体部分-------------
+.m_t_30 {
+    margin-top: 30px;
+}
+
+// -----------------主体部分------------------公用的商品信息样式-----------------------
+.commodity {
+    width: 100%;
+}
+
+.commodity li {
+    cursor: pointer;
+    float: left;
+    margin-right: 14px;
+    width: 262px;
+    height: 380px;
+    padding: 0 0 0px 0;
+    background-color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.commodity li p {
+    padding: 0 10px;
+}
+
+.a_info {
+    display: block;
+    position: relative;
+    padding-bottom: 16px;
+    .img_info {
+        cursor: pointer;
+        p {
+            overflow: hidden;
+            width: 100%;
+            padding: 0;
+            img {
+                overflow: hidden;
+                width: 100%;
+            }
+        }
+    }
+    .tit_info {
+        .p_t {
+            height: 1.2em;
+            line-height: 1.2em;
+            overflow: hidden;
+            margin-top: 9px;
+            color: #666;
+            font-size: 14px;
+        }
+        .p_b {
+            margin-top: 4px;
+            height: 40px;
+            line-height: 20px;
+            font-size: 14px;
+            overflow: hidden;
+            color: #333;
+        }
+    }
+    .price_info {
+        overflow: hidden;
+        margin-top: 3px;
+        .price1 {
+            font-weight: bold;
+            color: #df0010;
+            font-size: 14px;
+            float: left;
+            margin-left: -3px;
+            span {
+                color: #df0010;
+                font-size: 22px;
+            }
+        }
+        .price2 {
+            padding-left: 10px;
+            float: left;
+            padding-top: 8px;
+            del {
+                color: #969696;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+// -----------------主体部分    各个部分的标题-------------
+.main_title {
+    width: 100%;
+    text-align: left;
+    margin-top: 0px;
+}
+
+.title_div {
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.title_p {
+    font-size: 22px;
+    color: #222;
+    line-height: 32px;
+    font-weight: bold;
+    i {
+        width: 3px;
+        height: 20px;
+        background: rgba(34, 34, 34, 1);
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 8px;
+        margin-top: 6px;
+    }
+    span {
+        color: #666;
+        font-size: 14px;
+        font-weight: normal;
+        padding-left: 10px;
+    }
+}
+
+.title_div>a .TV_program {
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 108px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #DF0010;
+    border-radius: 30px;
+    text-align: center;
+    color: #DF0010;
+    i {
+        margin-right: 4px;
+        font-size: 18px;
+    }
+    .iconfontarrow {
+        font-size: 12px;
+        margin-left: 2px;
+        margin-right: 0;
+    }
+}
+
+.title_div>a .new_change {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 40px;
+    line-height: 40px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    .i_change_g {
+        font-size: 12px;
+        margin-right: 10px;
+        color: #666;
+    }
+}
+
+// ------------------TV直播部分----------------
+.live_li {
+    padding: 0;
+    position: relative;
+}
+
+.live_li .btn_lr {
+    // display:none;
+    a {
+        width: 62px;
+        display: block;
+        text-align: left;
+        i {
+            position: absolute;
+            top: 109px;
+            z-index: 3;
+            width: 48px;
+            height: 48px;
+            font-size: 48px;
+            color: #000;
+            opacity: 0.3;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .prev_img {
+            left: -62px;
+        }
+        .next_img {
+            right: -62px;
+        }
+    }
+}
+
+// ------------------TV直播轮播图部分----------------
+$liwidth:354px;
+$lilength:10;
+.lunbo_out {
+    position: relative;
+    overflow: hidden;
+    .lunbo_in {
+        overflow: hidden;
+        position: relative;
+        width: 1104px;
+        .lunbo_start {
+            width: $liwidth*$lilength;
+            height: -$liwidth*$lilength/2;
+            position: relative;
+            overflow: hidden;
+            padding: 0px;
+            margin: 0px;
+        }
+    }
+}
+
+// ------------------精选活动部分----------------
+.advertising {
+    text-align: center;
+    overflow: hidden;
+    padding: 6px 0 14px 0;
+    height: 280px;
+}
+
+.advertising img {
+    height: 280px;
+    position: relative;
+    left: 50%;
+    margin-left: -1090px;
+}

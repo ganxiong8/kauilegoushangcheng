@@ -1,0 +1,39 @@
+@charset "utf-8";
+@import "header"; //引入分部的文件
+@import "main";
+@import "fixed_top";
+@import "footer";
+@import "right_fixed";
+$width:100%;
+//设定一个宽度为720/1090/1200的盒子居中
+$width720:720px;
+$width1090:1090px;
+$width1200:1200px;
+body {
+    background-color: #f3f3f3;
+}
+
+.width720 {
+    width: $width720;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.width1090 {
+    width: $width1090;
+    margin: 0 auto;
+}
+
+.width1200 {
+    width: $width1200;
+    margin: 0 auto;
+}
+
+section {
+    width: $width;
+}
+
+.fixed_top {
+    height: 54px;
+    background: #F11323;
+}

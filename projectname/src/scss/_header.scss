@@ -1,0 +1,342 @@
+@charset "utf-8";
+// ------------------------头部的顶部样式-------------
+.header {
+    background: #fff;
+}
+
+.header_top {
+    line-height: 36px;
+    color: #8c8c8c;
+    border-top: 1px solid #f5f5f5;
+    border-bottom: 1px solid #f5f5f5;
+    background-color: #f5f5f5;
+}
+
+.h_t_l {
+    float: left;
+}
+
+.h_t_l a,
+.h_t_l span {
+    display: inline-block;
+    vertical-align: middle;
+    color: #999;
+}
+
+.a_login {
+    padding: 0 10px 0 20px;
+}
+
+.a_reg {
+    padding-left: 8px;
+}
+
+.h_t_r {
+    float: right;
+}
+
+.h_t_r li {
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    position: relative;
+}
+
+.h_t_r a {
+    padding: 0 10px;
+    border-right: 1px solid #dfdfdf;
+    color: #999;
+}
+
+.h_t_r li i {
+    background: url(../img/icon_list.png) no-repeat 0 -38px;
+    width: 14px;
+    height: 13px;
+    display: inline-block;
+}
+
+.h_t_r li b {
+    background: url(../img/icon_list.png) no-repeat scroll -157px -696px;
+    height: 6px;
+    width: 10px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+// ---------------头部的中间样式--------
+.header_mid {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+// 左边logo
+.h_m_l {
+    float: left;
+    width: 146px;
+}
+
+.h_m_l img {
+    width: 100%;
+}
+
+// 中间搜索
+.h_m_m {
+    float: left;
+    width: 510px;
+    margin-left: 280px;
+    .search_input {
+        width: 494px;
+        height: 35px;
+        margin-top: 20px;
+        border: 2px solid #f31425;
+        position: relative;
+        border-radius: 20px;
+        .iconsearch {
+            position: absolute;
+            top: 12px;
+            left: 10px;
+            font-size: 13px;
+            color: #999;
+        }
+        .text_search {
+            border: none;
+            float: left;
+            height: 19px;
+            padding: 8px 0;
+            width: 390px;
+            margin-left: 28px;
+            font-size: 14px;
+            outline: none;
+        }
+        .btn_search {
+            position: absolute;
+            top: 0;
+            right: -2px;
+            cursor: pointer;
+            border: none;
+            color: #fff;
+            height: 35px;
+            width: 76px;
+            font-size: 18px;
+            line-height: 33px;
+            border-top-right-radius: 35px;
+            border-bottom-right-radius: 35px;
+            background-color: #f31425;
+        }
+    }
+    .search_key {
+        padding-left: 14px;
+        float: left;
+        height: 25px;
+        overflow: hidden;
+        line-height: 25px;
+        a {
+            font-size: 13px;
+            padding-right: 5px;
+            color: #8c8c8c;
+        }
+    }
+}
+
+// 右边购物车
+.h_m_r {
+    float: right;
+    position: relative;
+    margin-top: 20px;
+    a {
+        display: block;
+        border: 2px solid #F31425;
+        width: 120px;
+        border-radius: 39px;
+        height: 39px;
+        text-align: center;
+        line-height: 39px;
+        background-color: #fff;
+        position: relative;
+        cursor: pointer;
+        .iconfont_car {
+            color: #666;
+            font-size: 17px;
+        }
+        span {
+            color: #222;
+            font-size: 16px;
+        }
+    }
+}
+
+// ---------------头部的底部样式--------
+.header_bottom {
+    border-bottom: 2px solid #df0010;
+}
+
+.pos_re {
+    position: relative;
+}
+
+.nav {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    li {
+        float: left;
+        padding: 0 30px;
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        a {
+            color: #333;
+            font-size: 16px;
+        }
+    }
+    .all_type {
+        width: 170px;
+        padding: 0;
+        text-align: left;
+        background: #f8283a;
+        a {
+            color: #fff;
+            .b_down {
+                font-size: 15px;
+                margin-right: 10px;
+                margin-left: 21px;
+            }
+        }
+    }
+    .l_padding {
+        padding-left: 60px;
+    }
+}
+
+// ---------------头部的底部样式   商品分类(隐藏部分)--------
+.list_down {
+    padding-top: 2px;
+    position: absolute;
+    top: 38px;
+    left: 0%;
+    width: 1090px;
+    height: 390px;
+    z-index: 4;
+    display: none;
+}
+
+.type_ul {
+    width: 170px;
+    height: 400px;
+    background: #f8283a;
+    .type_li {
+        height: 46px;
+        line-height: 46px;
+        cursor: pointer;
+        width: 170px;
+        .type_a {
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            width: 149px;
+            color: #fff;
+            font-size: 14px;
+            padding-left: 21px;
+            .i_type {
+                margin-right: 14px;
+            }
+        }
+    }
+}
+
+// ---------------头部的底部样式   商品分类(隐藏部分)  分类下面的每个分类--------
+.type_list {
+    position: absolute;
+    left: 170px;
+    right: 0;
+    background-color: #fff;
+    padding-left: 30px;
+    top: 4px;
+    height: 395px;
+    padding-top: 3px;
+    overflow: hidden;
+}
+
+// -----------左边文字部分-----------
+.type_list_ul li a {
+    font-weight: normal;
+    padding: 0 20px 0 0px;
+    color: #666;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+}
+
+.type_list_ul li a i {
+    font-size: 10px;
+    margin-left: 9px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1px;
+}
+
+.type_list_ul {
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 624px;
+    height: 395px;
+    li {
+        width: 624px;
+        border-bottom: 1px dashed #DCDCDC;
+        height: auto;
+        padding: 10px 0;
+        text-align: left;
+        line-height: 24px;
+        .type_title {
+            color: #333333;
+            font-size: 15px;
+            padding: 0;
+            float: left;
+            width: 100px;
+            text-align: left;
+        }
+        .type_content {
+            float: left;
+            width: 500px;
+        }
+    }
+}
+
+// -----------右边图片部分-----------
+.type_hot {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 236px;
+    height: 100%;
+    z-index: 3;
+    background: #FAFAFA;
+    .type_hot_all {
+        padding: 22px 9px 10px 9px;
+        height: 353px;
+        overflow: hidden;
+        width: 218px;
+        li {
+            margin-bottom: 1px;
+            background: #fff;
+            padding: 20px 14px;
+            float: left;
+            margin-right: 1px;
+            height: 80px;
+            width: 80px;
+            text-align: center;
+            overflow: hidden;
+            a {
+                width: 80px;
+                padding: 0;
+                img {
+                    width: 78px;
+                }
+            }
+        }
+    }
+}
