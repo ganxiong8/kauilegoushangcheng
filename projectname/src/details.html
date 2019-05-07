@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/details.css">
+</head>
+
+<body>
+    <!-- --------------引入jquery文件------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <!-- ----头部 注册栏 搜索栏 导航栏---- -->
+    <section class="header"></section>
+    <!-- 引入头部文件 -->
+    <script>
+        $('.header').load('public_html/header.html');
+    </script>
+    <!-- ------------商品详情------------- -->
+    <section class="details width1090 clear">
+        <div class="source">
+            <a href="#">首页</a>
+            <span>></span>
+            <a href="#">家电数码</a>
+            <span>></span>
+            <a href="#">生活家电</a>
+        </div>
+        <div class="sp_content">
+            <div class="sp_box">
+                <!-- ------------商品内容左边-------------- -->
+                <div class="sp_l">
+                    <div class="sp_img">
+                        <div class="sp_big_img"></div>
+                        <div class="sp_sm_img"></div>
+                    </div>
+                    <div class="number">
+                        <div class="num">编号：9256764</div>
+                        <div class="collect">
+                            <i></i> 收藏商品
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------商品内容中间-------------- -->
+                <div class="sp_m"></div>
+                <!-- ------------商品内容右边-------------- -->
+                <div class="sp_r"></div>
+            </div>
+        </div>
+    </section>
+    <!-- ----底部---- -->
+    <section class="footer"></section>
+    <script>
+        $('.footer').load('public_html/footer.html');
+    </script>
+    <!-- ----右边固定栏---- -->
+    <section class="fixed_right"></section>
+    <script>
+        $('.fixed_right').load('public_html/right_fixed.html');
+    </script>
+</body>
+
+</html>

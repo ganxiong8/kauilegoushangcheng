@@ -1,0 +1,17 @@
+@charset "utf-8";
+// ---------------登录注册底部样式-----------
+.login_footer {
+    background-color: #fff;
+    margin-top: 25px;
+    overflow: hidden;
+    p {
+        padding-top: 10px;
+        text-align: center;
+        font-family: "宋体";
+        color: #7e7e7e;
+        line-height: 25px;
+    }
+    .footer_p {
+        padding: 30px 0 40px 0;
+    }
+}

@@ -1,0 +1,258 @@
+@charset "utf-8";
+$width:100%;
+//设定一个宽度为1000/1200的盒子居中
+$width1000:1000px;
+$width1200:1200px;
+.width1000 {
+    width: $width1000;
+    margin: 0 auto;
+}
+
+.width1200 {
+    width: $width1200;
+    margin: 0 auto;
+}
+
+section {
+    width: $width;
+}
+
+//引入头部的文件
+@import "login_header";
+// ---------------------中间注册样式----------
+// ---------左边--------
+.registor_l {
+    float: left;
+    width: 600px;
+    text-align: center;
+    padding-top: 23px;
+}
+
+.registor_l img {
+    width: 560px;
+    height: 360px;
+}
+
+// ---------右边--------
+// ----------------右边上---------------
+.registor_r {
+    float: left;
+    width: 333px;
+    height: 600px;
+    background: url(../img/login_icon_list.png) 0 -115px no-repeat;
+}
+
+.registor_r {
+    padding: 0 33px;
+}
+
+.registor_r_t {
+    padding-top: 23px;
+    padding-bottom: 26px;
+    h2 {
+        color: #F11D20;
+        font-size: 22px;
+        height: 38px;
+        line-height: 38px;
+        font-weight: bold;
+        float: left;
+    }
+    div {
+        float: left;
+        height: 38px;
+        line-height: 38px;
+        margin-left: 50px;
+        a {
+            color: #c41f3a;
+        }
+    }
+}
+
+// ----------------右边中---------------
+.yzmdl {
+    display: none;
+}
+
+// .ptdl {
+//     display: none;
+// }
+.registor_btn a {
+    display: block;
+    width: 310px;
+    height: 40px;
+    color: #fff;
+    line-height: 40px;
+    background: #F11D20;
+    text-align: center;
+    font-size: 14px;
+    font-family: "宋体";
+    font-weight: bold;
+}
+
+.error {
+    height: 23px;
+    line-height: 23px;
+    margin-bottom: 3px;
+}
+
+.error_box {
+    display: none;
+}
+
+.captcha a {
+    color: #c41f3a;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: "宋体";
+}
+
+.item .yzm {
+    width: 157px;
+}
+
+.remember {
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    .span1 {
+        float: left;
+    }
+    .span2 {
+        float: right;
+        padding-right: 26px;
+        padding-top: 1px;
+        a {
+            color: #595959;
+            font-size: 12px;
+            display: block;
+            text-align: right;
+            outline: 0;
+        }
+    }
+}
+
+// -----------------右边下-------------
+.reg_type {
+    h5 {
+        color: #333;
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+        font-family: "宋体";
+        margin-bottom: 10px;
+    }
+    li {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: top;
+        .qq,
+        .weibo,
+        .zfb {
+            text-indent: -9999px;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: url(../img/login_icon_list.png) 0 0;
+        }
+        .qq {
+            background-position: 0 -32px;
+        }
+        .weibo {
+            background-position: -74px -32px;
+        }
+        .zfb {
+            background-position: -143px -32px;
+        }
+        .weixin {
+            text-indent: 0px;
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+// -------------右边的表单--------------
+.select {
+    padding-bottom: 10px;
+    text-align: left;
+    span {
+        padding-right: 45px;
+        label {
+            padding-left: 5px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.login_r_b .item {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.item .text {
+    color: #333333;
+    border: 1px solid #c8c8c8;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 6px;
+    width: 293px;
+    font-size: 12px;
+    padding: 7px 0 7px 6px;
+}
+
+.item .yzm {
+    width: 157px;
+}
+
+.a_code {
+    margin-left: 11px;
+    color: #444444;
+    font-family: "宋体";
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    outline: 0;
+    display: inline-block;
+    background-color: #f6f6f6;
+    border: 1px solid #c8c8c8;
+    width: 117px;
+    height: 38px;
+    line-height: 38px;
+    vertical-align: top;
+}
+
+.error {
+    height: 23px;
+    line-height: 23px;
+    margin-bottom: 3px;
+}
+
+.error_box {
+    display: none;
+}
+
+// --------------------- 固定定位二维码下载-----------------------
+.registor_fixed {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    margin-right: -515px;
+    z-index: 6;
+    margin-top: -135px;
+    a {
+        display: block;
+        position: relative;
+        .two_code {
+            display: none;
+            position: absolute;
+            top: -54px;
+            left: -188px;
+        }
+    }
+}
+
+// --------------------登录框-------------------
+//引入底部的文件
+@import "login_footer";

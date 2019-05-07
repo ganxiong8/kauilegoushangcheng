@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>快乐购商城 - 用户注册</title>
+    <meta name="keywords" content="快乐购商城">
+    <meta name="description" content="快乐购商城">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <!-- ----登录注册头部头部---- -->
+    <section class="login_header"></section>
+    <!-- ------引入头部文件------ -->
+    <script>
+        $('.login_header').load('public_html/login_header.html');
+    </script>
+    <!-- ----------------注册框--------------- -->
+    <section class="login width1000">
+        <div class="login_l clear"></div>
+        <div class="login_r clear">
+            <div class="login_r_all">
+                <div class="login_r_t clear">
+                    <h2>用户注册</h2>
+                    <div>
+                        已有账号
+                        <a href="#">在此登录</a>
+                    </div>
+                </div>
+                <div class="login_r_b">
+                    <form method="post">
+                        <div class="item mobile">
+                            <input type="text" placeholder="请输入手机号码" class="text" name="mobile">
+                            <div class="error">
+                                <div class="error_box">请输入11位手机号码</div>
+                            </div>
+                        </div>
+                        <div class="item mobile_code">
+                            <input type="text" placeholder="验证码" class="text yzm" name="mobile_code">
+                            <a href="#" class="a_code">
+                                <span></span>
+                                <span></span>
+                                <div>获取短信验证码</div>
+                            </a>
+                            <div class="error">
+                                <div class="error_box">请输入发送给您手机上的验证码</div>
+                            </div>
+                        </div>
+                        <div class="item password">
+                            <input type="password" placeholder="请输入密码" class="text" name="password">
+                            <div class="error">
+                                <div class="error_box">请输入您的密码,您的密码可能为字母、数字或符号组合</div>
+                            </div>
+                        </div>
+                        <div class="item password_comfirm">
+                            <input type="password" placeholder="请再次输入密码" class="text" name="password_comfirm">
+                            <div class="error">
+                                <div class="error_box">请输入您的密码,您的密码可能为字母、数字或符号组合</div>
+                            </div>
+                        </div>
+                        <div class="item captcha">
+                            <input type="text" placeholder="验证码" class="text yzm" name="captcha">
+                            <img src="https://www.happigo.com/shop/index.php?act=seccode&op=makecode&nchash=1aa4c1af&t=0.715310263975373">
+                            <a href="#">换一张</a>
+                            <div class="error">
+                                <div class="error_box">
+                                    <i></i>请输入右侧验证码
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="login_btn"><a href="#">立即注册</a></div>
+                            <div class="agree">
+                                <input type="checkbox" checked="checked">
+                                <label for="autoLogin">
+                                        注册即表示同意快乐购
+                                        <span><a href="#">《用户服务协议》</a></span>
+                                        条款
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ----登录注册头部头部---- -->
+    <section class="login_footer"></section>
+    <!-- ------引入底部文件------ -->
+    <script>
+        $('.login_footer').load('public_html/login_footer.html');
+    </script>
+</body>
+
+</html>

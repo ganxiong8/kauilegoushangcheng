@@ -1,0 +1,85 @@
+@charset "utf-8";
+$width:100%;
+//设定一个宽度为1090的盒子居中
+$width1090:1090px;
+.width1090 {
+    width: $width1090;
+    margin: 0 auto;
+}
+
+section {
+    width: $width;
+}
+
+// --------------自定义字体--------------
+@font-face {
+    font-family: "iconfont";
+    src: url('../fonts/iconfont.woff') format('woff')
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+}
+
+@import "header"; //引入分部的文件
+// <!-- ------------商品详情------------- -->
+// -------------来源----------
+.source {
+    height: 57px;
+    line-height: 57px;
+    overflow: hidden;
+    a {
+        color: #333333;
+        font-size: 14px;
+    }
+    span {
+        color: #666666;
+        font-size: 14px;
+        padding: 0 8px;
+    }
+}
+
+// ------------商品左边-------------
+.sp_l {
+    float: left;
+    width: 380px;
+}
+
+// --------左边大图---------
+// --------左边小图---------
+// --------左边商品编号-----
+.number {
+    height: 40px;
+    overflow: hidden;
+    padding-top: 25px;
+    width: 100%;
+    .num {
+        color: #999999;
+        display: block;
+        float: left;
+    }
+    .collect {
+        color: #8b8b8b;
+        float: left;
+        line-height: 16px;
+        padding-left: 23px;
+        padding-right: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        i {
+            background: url(../img/detail_icon_list.png) no-repeat scroll -30px -309px;
+            display: block;
+            float: left;
+            width: 17px;
+            height: 16px;
+            margin-right: 3px;
+        }
+    }
+}
+
+// ------------商品中间-------------
+// ------------商品右边-------------
+@import "footer";
+@import "right_fixed";
