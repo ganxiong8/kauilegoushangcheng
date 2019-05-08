@@ -1,9 +1,4 @@
 @charset "utf-8";
-@import "header"; //引入分部的文件
-@import "main";
-@import "fixed_top";
-@import "footer";
-@import "right_fixed";
 $width:100%;
 //设定一个宽度为720/1090/1200的盒子居中
 $width720:720px;
@@ -32,3 +27,10 @@ body {
 section {
     width: $width;
 }
+
+@import "header"; //引入分部的文件
+@import "lunbo";
+@import "main";
+@import "fixed_top";
+@import "footer";
+@import "right_fixed";

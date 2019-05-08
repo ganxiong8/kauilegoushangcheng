@@ -1,0 +1,57 @@
+@charset "utf-8";
+$width:100%;
+section {
+    width: $width;
+}
+
+// -----------------轮播图样式-----------------
+.banner {
+    width: 100%;
+    position: relative;
+    .lunbo_1 {
+        width: 100%;
+        overflow: hidden;
+        height: 400px;
+        .lunbo_big {
+            position: relative;
+            li {
+                left: -275.5px;
+                opacity: 1;
+                z-index: 0;
+                position: absolute;
+                img {
+                    height: 400px;
+                }
+            }
+        }
+        .lunbo_sm {
+            bottom: 0px;
+            height: 28px;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            z-index: 3;
+            .btn_all {
+                margin: 0 auto;
+                padding: 0 20px;
+                height: 28px;
+                line-height: 28px;
+                li {
+                    cursor: pointer;
+                    width: 25px;
+                    height: 5px;
+                    display: inline-block;
+                    margin: 8px 5px;
+                    background-color: #000;
+                    opacity: 0.3;
+                }
+                .active {
+                    background-color: #fff;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

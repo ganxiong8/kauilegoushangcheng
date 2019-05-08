@@ -1,7 +1,14 @@
 @charset "utf-8";
 $width:100%;
-//设定一个宽度为1090的盒子居中
+//设定一个宽度为720/1090的盒子居中
+$width720:720px;
 $width1090:1090px;
+.width720 {
+    width: $width720;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .width1090 {
     width: $width1090;
     margin: 0 auto;
@@ -25,7 +32,7 @@ section {
 
 @import "header"; //引入分部的文件
 // <!-- ------------商品详情------------- -->
-// -------------来源----------
+// -------------商品来源----------
 .source {
     height: 57px;
     line-height: 57px;
@@ -48,7 +55,87 @@ section {
 }
 
 // --------左边大图---------
+.sp_img {
+    width: 100%
+}
+
+.sp_big_img {
+    height: 380px;
+    width: 380px;
+    border: 1px solid #e5e5e5;
+    .glass {
+        width: 380px;
+        height: 380px;
+        cursor: crosshair;
+        float: left;
+        position: relative;
+        z-index: 2;
+        img {
+            width: 380px;
+            height: 380px;
+            opacity: 1;
+        }
+    }
+}
+
 // --------左边小图---------
+.sp_sm_img {
+    height: 60px;
+    margin: 17px 0 0 25px;
+    position: relative;
+    width: 350px;
+    float: left;
+}
+
+.show_img {
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+    width: 370px;
+    .img_list {
+        position: relative;
+    }
+    .img_item {
+        float: left;
+        list-style: outside none none;
+        margin-right: 10px;
+        height: 60px;
+        width: 60px;
+        a {
+            display: block;
+            height: 60px;
+            width: 60px;
+            border: 1px solid #e5e5e5;
+            box-sizing: border-box;
+            img {
+                width: 54px;
+                height: 54px;
+                margin: 2px 2px;
+            }
+        }
+    }
+}
+
+.lr_btn {
+    .btn {
+        background-image: url(../img/detail_icon_list.png);
+        background-repeat: no-repeat;
+        height: 25px;
+        position: absolute;
+        text-indent: -9999px;
+        top: 20px;
+        width: 14px;
+    }
+    .l_btn {
+        background-position: 0 -373px;
+        left: -25px;
+    }
+    .r_btn {
+        background-position: -20px -373px;
+        right: -10px;
+    }
+}
+
 // --------左边商品编号-----
 .number {
     height: 40px;
@@ -80,6 +167,286 @@ section {
 }
 
 // ------------商品中间-------------
+.sp_m {
+    float: left;
+    margin-left: 30px;
+    width: 560px;
+}
+
+// ------------标题一-------------
+.title1 {
+    color: #303030;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 24px;
+    padding-top: 10px;
+    overflow: hidden;
+    span {
+        font-size: 18px;
+        color: #303030;
+        .eml {
+            padding-right: 5px;
+            font-size: 18px;
+        }
+        .emr {
+            padding-left: 5px;
+            font-size: 18px;
+        }
+    }
+}
+
+// ------------标题二-------------
+.title2 {
+    font-size: 14px;
+    color: #c41f3a;
+    font-weight: normal;
+    margin-top: 15px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+// -------------价格-------------
+.price {
+    width: 100%;
+    background-color: #fefafb;
+    margin-top: 10px;
+    border-bottom: 1px dashed #f0dde1;
+    padding-bottom: 10px;
+    .price_info {
+        width: 520px;
+        .happy {
+            color: #666;
+            float: left;
+            font-size: 14px;
+            min-width: 55px;
+            width: 75px;
+            padding-left: 10px;
+        }
+        .money {
+            float: left;
+            width: 420px;
+            .price_now {
+                font-family: arial;
+                font-size: 42px;
+                color: #DF0010;
+                em {
+                    color: #c41f3a;
+                    font-family: "华文细黑", microsoft yahei;
+                    font-size: 18px;
+                    font-weight: normal;
+                }
+            }
+            del {
+                color: #999999;
+                font-size: 14px;
+                padding: 0 18px 0 8px;
+            }
+        }
+    }
+}
+
+// -----------运费-----------
+.freight {
+    padding: 12px 0;
+    overflow: hidden;
+    border-bottom: 1px dotted #dcdcdc;
+    .freight_info {
+        color: #666;
+        float: left;
+        font-size: 14px;
+        min-width: 55px;
+        width: 75px;
+        padding-left: 10px;
+    }
+    .postage {
+        color: #333333;
+        font-size: 14px;
+    }
+}
+
+// -----------公有样式-------------
+.sp_info {
+    position: relative;
+}
+
+.title {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0 0 0;
+    line-height: 33px;
+    span {
+        color: #666;
+        float: left;
+        font-size: 14px;
+        min-width: 55px;
+        width: 75px;
+        padding-left: 10px;
+    }
+}
+
+//  -----------颜色-----------尺码-----------
+.title ul {
+    float: left;
+    width: 470px;
+    li {
+        line-height: 28px;
+        border: 2px solid #F11D20;
+        overflow: hidden;
+        min-width: 24px;
+        color: #333333;
+        float: left;
+        margin-right: 10px;
+        padding: 0 15px;
+        position: relative;
+        height: 32px;
+        display: block;
+        text-align: center;
+        margin-bottom: 8px;
+        box-sizing: border-box;
+        a {
+            color: #404040;
+        }
+        b {
+            background: url(../img/detail_icon_list.png) -87px 0;
+            bottom: 0;
+            display: block;
+            height: 13px;
+            position: absolute;
+            right: 0;
+            width: 12px;
+        }
+    }
+}
+
+// -----------数量-----------
+.add_sub {
+    float: left;
+    position: relative;
+    a {
+        border: 1px solid #c8c8c8;
+        background-color: #fff;
+        float: left;
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        color: #999999;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        line-height: 30px;
+    }
+    .text {
+        border-top: 1px solid #c8c8c8;
+        border-bottom: 1px solid #c8c8c8;
+        border-left: 0px;
+        border-right: 0px;
+        float: left;
+        height: 30px;
+        text-align: center;
+        width: 60px;
+        line-height: 23px;
+        display: inline-block;
+    }
+}
+
+// -----------购买-----------
+.buy {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    width: 136px;
+    .code_buy {
+        margin-left: 10px;
+        display: block;
+        width: 136px;
+        height: 36px;
+        color: #fff;
+        text-align: center;
+        line-height: 36px;
+        font-size: 16px;
+        background: #F11D20;
+        border: 2px solid #F11D20;
+    }
+    .two_code_buy {
+        display: none;
+        position: absolute;
+        background: #fff;
+        z-index: 66;
+        top: 60px;
+        left: 0;
+        border: 1px solid #d9d9d9;
+        text-align: center;
+        padding: 10px 25px;
+        P {
+            font-size: 14px;
+            color: #222;
+            height: 24px;
+            line-height: 24px;
+            margin-bottom: 4px;
+        }
+        div {
+            width: 170px;
+            height: 170px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+// -----------优惠-----------
+.cheap {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0 0 0;
+    div {
+        font-size: 14px;
+        color: #333;
+        overflow: hidden;
+    }
+}
+
 // ------------商品右边-------------
+.sp_r {
+    width: 120px;
+    float: right;
+    .sp_r_info {
+        width: 160px;
+        height: 191px;
+        margin-left: 20px;
+        text-align: center;
+        color: #444851;
+        background: url(../img/detail_icon_list.png) no-repeat scroll 0 -433px;
+        .bg_img {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            margin: 20px 0 20px 20px;
+            img {
+                width: 100%;
+                margin-top: 20px;
+            }
+            b {
+                background: url(../img/detail_icon_list.png) no-repeat scroll -173px -433px;
+                height: 69px;
+                left: 12px;
+                position: absolute;
+                top: -44px;
+                width: 105px;
+            }
+        }
+        .span_info {
+            font-size: 13px;
+            color: #fff;
+            display: block;
+            width: 100%;
+            text-align: center;
+            line-height: 16px;
+        }
+    }
+}
+
 @import "footer";
 @import "right_fixed";

@@ -63,6 +63,63 @@
     display: inline-block;
 }
 
+.h_t_r .download {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: -10px;
+    z-index: 15;
+    background-color: #fff;
+    border-top: 1px solid #dfdfdf;
+    .down {
+        border: 1px solid #f6f6f6;
+        box-shadow: 0 0 1px #f6f6f6;
+        padding: 5px;
+        margin-top: 5px;
+        b {
+            position: absolute;
+            top: -2px;
+            width: 12px;
+            height: 8px;
+            background: url(../img/icon_list.png) no-repeat -234px -592px;
+            left: 25%;
+            margin-left: -6px;
+        }
+        p {
+            height: 16px;
+            line-height: 16px;
+            text-align: center;
+            color: #3b3b3b;
+        }
+    }
+}
+
+.serve {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: -1px;
+    z-index: 5;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 90%;
+    background-color: #fff;
+    text-align: center;
+    a {
+        height: 25px;
+        line-height: 25px;
+        border: 0;
+    }
+}
+
+.h_t_r .li_hov:hover .download {
+    display: block;
+}
+
+.h_t_r .help:hover .serve {
+    display: block;
+}
+
 // ---------------头部的中间样式--------
 .header_mid {
     width: 100%;
