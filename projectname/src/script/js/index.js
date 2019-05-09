@@ -1,44 +1,22 @@
 // ----------------首页js----------------
-// ----------------二级导航-----------
-;
-(function($) {
-    class two {
-        constructor() {
-            this.all = $('.all_type');
-            this.down = $('.list_down');
-        }
-        init() {
-            var _this = this;
-            this.all.hover(function() {
-                _this.over();
-            }, function() {
-                _this.out();
-            })
-        }
-        over() {
-            this.down.show();
-        }
-        out() {
-            this.down.hide();
-        }
-    }
-    new two().init()
-})(jQuery);
+
 // --------------固定搜索框-------------
 ;
 (function($) {
-    class fixedtop {
-        constructor() {
-            this.fixed = $('.fixed_top');
+    $(window).on('scroll', function() {
+
+        var $top = $(window).scrollTop()
+        if ($top > 800) {
+            $('.fixed_top').stop(true).animate({
+                top: 0
+            })
+        } else {
+            $('.fixed_top').stop(true).animate({
+                top: -54
+            })
         }
-        init() {
-            var _this = this;
-            if (scrollTop > 500) {
-                _this.fixed.show();
-            }
-        }
-    }
-    new fixedtop().init();
+    })
+
 })(jQuery);
 // ------------banner轮播------------
 ;
@@ -102,7 +80,6 @@
     new Banner().init()
 })(jQuery);
 // -------------TV直播轮播--------------
-
 ;
 (function($) {
     class live {
@@ -114,37 +91,37 @@
             this.right = $('.next');
         }
         init() {
-            var _this = this;
-            this.wrap.hover(function() {
-                _this.over()
-            }, function() {
-                _this.out()
-            })
+                var _this = this;
+                // this.wrap.hover(function() {
+                //     _this.over()
+                // }, function() {
+                //     _this.out()
+                // })
 
-            //计算ul的宽度
-            this.liwidth = this.list.outerWidth(true);
-            this.ul.width(this.list.length * this.liwidth);
+                //计算ul的宽度
+                this.liwidth = this.list.outerWidth(true);
+                this.ul.width(this.list.length * this.liwidth);
 
-            //给左右箭头添加点击事件
-            this.showlength = 3;
+                //给左右箭头添加点击事件
+                this.showlength = 3;
 
-            this.right.on('click', function() {
-                _this.rightclick();
-            });
+                this.right.on('click', function() {
+                    _this.rightclick();
+                });
 
-            this.left.on('click', function() {
-                _this.leftclick();
-            });
+                this.left.on('click', function() {
+                    _this.leftclick();
+                });
 
-        }
-        over() {
-            this.left.show();
-            this.right.show();
-        }
-        out() {
-            this.left.hide();
-            this.right.hide();
-        }
+            }
+            // over() {
+            //     this.left.show();
+            //     this.right.show();
+            // }
+            // out() {
+            //     this.left.hide();
+            //     this.right.hide();
+            // }
         rightclick() {
             if (this.list.length > this.showlength) {
                 this.showlength++;
@@ -162,7 +139,9 @@
             });
         }
     }
-    new live().init();
+    setTimeout(function() {
+        new live().init();
+    }, 200)
 })(jQuery);
 // -------------------数据渲染---------------------
 ;
@@ -201,21 +180,6 @@
 // ----------回到顶部----------
 ;
 (function($) {
-
-    // class top {
-    //     constructor() {
-    //         this.top1 = $('.totop');
-    //     }
-    //     init() {
-    //         this.top1.on('click', function() {
-    //             $('html,body').animate({
-    //                 scrollTop: 0
-    //             });
-    //         })
-    //     }
-    // }
-    // new top().init();
-
     var $top = $('.totop')
     $top.on('click', function() {
         $('html,body').animate({

@@ -25,33 +25,27 @@
 </head>
 
 <body>
-    <!-- --------------引入jquery文件------------- -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
     <!-- ----头部 注册栏 搜索栏 导航栏---- -->
     <section class="header"></section>
-    <!-- 引入头部文件 -->
-    <script>
-        $('.header').load('public_html/header.html');
-    </script>
     <!-- ----banner轮播图---- -->
     <section class="banner">
         <div class="lunbo_1">
             <div class="">
                 <ul class="lunbo_big">
                     <li>
-                        <a href="#"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06104763805660943.jpg"></a>
+                        <a href="javascript:;"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06104763805660943.jpg"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06104764458071744.jpg"></a>
+                        <a href="javascript:;"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06104764458071744.jpg"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06103833319164689.jpg"></a>
+                        <a href="javascript:;"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06103833319164689.jpg"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06103924782412414.jpg"></a>
+                        <a href="javascript:;"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06103924782412414.jpg"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06103709172971754.jpg"></a>
+                        <a href="javascript:;"><img src="https://ecimg.happigo.com/data/upload/app/carousel/2019/06103709172971754.jpg"></a>
                     </li>
                 </ul>
                 <div class="lunbo_sm">
@@ -64,16 +58,13 @@
                             <li></li>
                         </ol>
                     </div>
-                    <a href="#" class="right"></a>
+                    <a href="javascript:;" class="right"></a>
                 </div>
             </div>
         </div>
     </section>
     <!-- ----main主体部分---- -->
     <section class="main width1090 clear"></section>
-    <script>
-        $('.main').load('public_html/main.html');
-    </script>
     <!-- ----滚轮滚过一定距离,顶部出现固定搜索栏---- -->
     <section class="fixed_top">
         <div class="width1200">
@@ -91,13 +82,52 @@
     </section>
     <!-- ----底部---- -->
     <section class="footer"></section>
-    <script>
-        $('.footer').load('public_html/footer.html');
-    </script>
     <!-- ----右边固定栏---- -->
-    <section class="fixed_right"></section>
+    <section class="fixed_right">
+        <div class="fixed_r">
+            <div class="r_f_top">
+                <div>
+                    <a href="http://10.31.163.17/second/projectname/src/registor.html" target="_blank">
+                        <i class="icon_user iconfont"></i>
+                        <div class="number">账号</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="http://10.31.163.17/second/projectname/src/cart.html" target="_black">
+                        <i class="icon_car iconfont" id="shopCart"></i>
+                        <div class="car">购物车</div>
+                        <div class="car_num">0</div>
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <i class="icon_collect iconfont"></i>
+                        <div class="collect">收藏</div>
+                    </a>
+                </div>
+            </div>
+            <div class="r_f_bottom">
+                <div class="erweima">
+                    <a href="#"><i class="ewm_img iconfont"></i></a>
+                    <div></div>
+                </div>
+                <div class="kefu">
+                    <a href="#"><i class="online_cus iconfont"></i></a>
+                    <div></div>
+                </div>
+                <div>
+                    <a href="javacript:;" class="totop"><i class="retrun_top iconfont"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- --------------引入jquery文件------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <!-- 引入文件 -->
     <script>
-        $('.fixed_right').load('public_html/right_fixed.html');
+        $('.header').load('public_html/header.html');
+        $('.main').load('public_html/main.html');
+        $('.footer').load('public_html/footer.html');
     </script>
     <script src="script/js/index.js"></script>
 </body>

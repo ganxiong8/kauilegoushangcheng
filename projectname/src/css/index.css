@@ -208,6 +208,10 @@ section {
 .pos_re {
   position: relative; }
 
+.nav > li {
+  padding: 0 30px;
+  position: relative; }
+
 .nav {
   width: 100%;
   height: 40px;
@@ -215,8 +219,6 @@ section {
   position: relative; }
 .nav li {
   float: left;
-  padding: 0 30px;
-  position: relative;
   height: 40px;
   line-height: 40px; }
 .nav li a {
@@ -246,10 +248,19 @@ section {
   z-index: 4;
   display: none; }
 
+.all_type:hover .list_down {
+  display: block; }
+
 .type_ul {
   width: 170px;
   height: 400px;
   background: #f8283a; }
+.type_ul .type_li:hover {
+  background: #fff; }
+.type_ul .type_li:hover .type_a {
+  color: #f8283a; }
+.type_ul .type_li:hover .type_list {
+  display: block; }
 .type_ul .type_li {
   height: 46px;
   line-height: 46px;
@@ -257,7 +268,6 @@ section {
   width: 170px; }
 .type_ul .type_li .type_a {
   font-weight: bold;
-  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 149px;
@@ -266,6 +276,8 @@ section {
   padding-left: 21px; }
 .type_ul .type_li .type_a .i_type {
   margin-right: 14px; }
+.type_ul .type_li_one {
+  position: relative; }
 
 .type_list {
   position: absolute;
@@ -276,9 +288,10 @@ section {
   top: 4px;
   height: 395px;
   padding-top: 3px;
-  overflow: hidden; }
+  display: none;
+  width: 872px; }
 
-.type_list_ul li a {
+.type_list .type_list_ul li a {
   font-weight: normal;
   padding: 0 20px 0 0px;
   color: #666;
@@ -298,7 +311,8 @@ section {
   overflow-y: auto;
   overflow-x: hidden;
   width: 624px;
-  height: 395px; }
+  height: 395px;
+  background: #fff; }
 .type_list_ul li {
   width: 624px;
   border-bottom: 1px dashed #DCDCDC;
@@ -320,7 +334,7 @@ section {
 .type_hot {
   position: absolute;
   top: 0px;
-  right: 0px;
+  left: 666px;
   width: 236px;
   height: 100%;
   z-index: 3;
@@ -532,8 +546,6 @@ section {
   padding: 0;
   position: relative; }
 
-.live_li .btn_lr {
-  display: none; }
 .live_li .btn_lr a {
   width: 62px;
   display: block;
@@ -563,7 +575,7 @@ section {
   width: 1104px; }
 .lunbo_out .lunbo_in .lunbo_start {
   width: 2124px;
-  left: -736px;
+  left: 0;
   position: relative;
   overflow: hidden;
   padding: 0px;
@@ -680,9 +692,8 @@ section {
   margin-left: -1090px; }
 
 .fixed_top {
-  display: none;
   position: fixed;
-  top: 0px;
+  top: -54px;
   width: 100%;
   left: 0;
   height: 54px;
@@ -853,7 +864,11 @@ section {
   border-bottom: 1px solid #575757; }
 .r_f_top > div a {
   display: block;
-  padding-bottom: 25px; }
+  padding-top: 13px;
+  padding-bottom: 13px; }
+
+.r_f_top > div:hover, .r_f_bottom a:hover {
+  background: #f31425; }
 
 .r_f_top > div:nth-child(3) {
   border: 0; }

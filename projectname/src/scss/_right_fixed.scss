@@ -42,8 +42,14 @@
     border-bottom: 1px solid #575757;
     a {
         display: block;
-        padding-bottom: 25px;
+        padding-top: 13px;
+        padding-bottom: 13px;
     }
+}
+
+.r_f_top>div:hover,
+.r_f_bottom a:hover {
+    background: #f31425;
 }
 
 .r_f_top>div:nth-child(3) {
