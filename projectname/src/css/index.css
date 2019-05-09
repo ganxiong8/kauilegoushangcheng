@@ -397,7 +397,14 @@ section {
 .commodity {
   width: 100%; }
 
+.commodity > li:hover {
+  border: 3px solid #df0010; }
+
+.commodity > li, .lunbo_start > li {
+  box-sizing: border-box; }
+
 .commodity li {
+  border: 3px solid transparent;
   cursor: pointer;
   float: left;
   margin-right: 5px;
@@ -525,6 +532,8 @@ section {
   padding: 0;
   position: relative; }
 
+.live_li .btn_lr {
+  display: none; }
 .live_li .btn_lr a {
   width: 62px;
   display: block;
@@ -553,12 +562,110 @@ section {
   position: relative;
   width: 1104px; }
 .lunbo_out .lunbo_in .lunbo_start {
-  width: 3540px;
-  height: -1770px;
+  width: 2124px;
+  left: -736px;
   position: relative;
   overflow: hidden;
   padding: 0px;
-  margin: 0px; }
+  margin: 0px;
+  height: 300px; }
+.lunbo_out .lunbo_in .lunbo_start li {
+  border: 3px solid transparent;
+  cursor: pointer;
+  float: left;
+  position: relative;
+  width: 354px;
+  transition: box-shadow 0.5s ease 0s;
+  background: #fff;
+  margin-right: 14px; }
+.lunbo_out .lunbo_in .lunbo_start li:hover {
+  border: 3px solid #df0010; }
+
+.live_a {
+  display: block;
+  position: relative;
+  padding: 0 0 16px 0; }
+.live_a .time {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  height: 22px;
+  left: 0;
+  line-height: 22px;
+  position: absolute;
+  top: 0;
+  width: 52px;
+  z-index: 9;
+  padding: 0 6px; }
+.live_a .time i {
+  font-size: 10px;
+  margin-right: 5px; }
+.live_a .center_mid {
+  position: relative;
+  display: block;
+  height: 199px;
+  text-align: center;
+  overflow: hidden; }
+.live_a .center_mid .togo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  height: 34px;
+  margin-top: -17px; }
+.live_a .center_mid .togo div {
+  font-size: 17px;
+  padding: 0 15px;
+  color: #fff;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 34px;
+  height: 34px;
+  line-height: 34px; }
+.live_a .center_mid img {
+  margin: 0 auto;
+  transition: all 0.6s ease 0s;
+  display: inline;
+  width: auto;
+  height: 100%; }
+.live_a .live_tit {
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 0px 10px 0px 11px;
+  margin-top: 10px; }
+.live_a .live_tit span {
+  color: #333;
+  font-size: 16px; }
+.live_a .live_price {
+  margin-top: 10px;
+  color: #969696;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 10px 0px 11px; }
+.live_a .live_price .now_price {
+  font-weight: bold;
+  color: #df0010; }
+.live_a .live_price .now_price span {
+  font-size: 22px; }
+.live_a .live_price .now_price .smaller {
+  font-size: 14px;
+  margin-left: -2px; }
+.live_a .live_price .old_price del {
+  font-size: 14px; }
+.live_a .go_buy {
+  position: absolute;
+  bottom: 16px;
+  right: 10px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background: linear-gradient(0deg, #fd6140 0%, #f00919 100%);
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  border-radius: 15px; }
 
 .advertising {
   text-align: center;
@@ -579,7 +686,7 @@ section {
   width: 100%;
   left: 0;
   height: 54px;
-  background: #f11323;
+  background-color: #f11323;
   z-index: 50; }
 .fixed_top .fixed_img {
   float: left;

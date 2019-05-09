@@ -78,6 +78,55 @@ section {
     }
 }
 
+// ---------小放大放----------
+.glass .sf {
+    top: 0px;
+    left: 0px;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    border-width: 1px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    bottom: 0;
+    visibility: hidden;
+    z-index: 99;
+    opacity: 0.6;
+}
+
+.glass .bf {
+    height: auto;
+    left: 390px !important;
+    position: absolute;
+    z-index: 5000;
+    top: 0px;
+    visibility: hidden;
+    .bf_out {
+        width: 380px;
+        border: 1px solid #dbdbdb;
+        position: relative;
+        z-index: 110;
+        box-shadow: 0 0 8px #dbdbdb;
+        .bf_in {
+            width: 100%;
+            height: 380px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            z-index: 110;
+            img {
+                position: absolute;
+                border: 0px;
+                display: block;
+                left: -5000px;
+                top: 0px;
+                width: 800px;
+                height: 800px;
+            }
+        }
+    }
+}
+
 // --------左边小图---------
 .sp_sm_img {
     height: 60px;
@@ -225,21 +274,16 @@ section {
         .money {
             float: left;
             width: 420px;
+            em {
+                color: #c41f3a;
+                font-family: "华文细黑", microsoft yahei;
+                font-size: 18px;
+                font-weight: normal;
+            }
             .price_now {
                 font-family: arial;
                 font-size: 42px;
                 color: #DF0010;
-                em {
-                    color: #c41f3a;
-                    font-family: "华文细黑", microsoft yahei;
-                    font-size: 18px;
-                    font-weight: normal;
-                }
-            }
-            del {
-                color: #999999;
-                font-size: 14px;
-                padding: 0 18px 0 8px;
             }
         }
     }

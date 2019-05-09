@@ -1,3 +1,46 @@
+// ----------------首页js----------------
+// ----------------二级导航-----------
+;
+(function($) {
+    class two {
+        constructor() {
+            this.all = $('.all_type');
+            this.down = $('.list_down');
+        }
+        init() {
+            var _this = this;
+            this.all.hover(function() {
+                _this.over();
+            }, function() {
+                _this.out();
+            })
+        }
+        over() {
+            this.down.show();
+        }
+        out() {
+            this.down.hide();
+        }
+    }
+    new two().init()
+})(jQuery);
+// --------------固定搜索框-------------
+;
+(function($) {
+    class fixedtop {
+        constructor() {
+            this.fixed = $('.fixed_top');
+        }
+        init() {
+            var _this = this;
+            if (scrollTop > 500) {
+                _this.fixed.show();
+            }
+        }
+    }
+    new fixedtop().init();
+})(jQuery);
+// ------------banner轮播------------
 ;
 (function($) {
     class Banner {
@@ -5,32 +48,27 @@
             this.banner = $('.banner');
             this.picLi = $('.lunbo_big li');
             this.btnLi = $('.ol_li li');
-            this.btn_left = $('.left');
             this.btn_right = $('.right');
-            this.time = null;
+            this.timer = null;
             this.num = 0;
         }
         init() {
             var _this = this;
             this.btnLi.each(function() {
                 $(this).on('click', function() {
-                    _this.btnliover(this)
+                    _this.btnli(this)
                 })
             })
-
             this.banner.hover(function() {
-                _this.arrowover()
+                _this.over()
             }, function() {
-                _this.arrowout()
+                _this.out()
             })
             this.btn_right.on('click', function() {
                 _this.rightclick()
             })
-            this.btn_left.on('click', function() {
-                _this.leftclick()
-            })
         }
-        btnliover(bli) {
+        btnli(bli) {
             this.num = $(bli).index()
             $(bli).addClass('active').siblings('li').removeClass('active');
             this.picLi.eq($(bli).index()).stop(true).animate({
@@ -38,48 +76,150 @@
             }).siblings().stop(true).animate({
                 'opacity': 0
             })
-
         }
-        arrowover() {
-            this.btn_left.show();
-            this.btn_right.show();
+        over() {
             clearInterval(this.timer)
-
         }
-        arrowout() {
+        out() {
             var _this = this
-            this.btn_left.hide();
-            this.btn_right.hide()
             this.timer = setInterval(function() {
                 _this.btn_right.click()
-            }, 2000);
+            }, 3000);
         }
         rightclick() {
-                this.num++;
-                if (this.num > this.btnLi.size() - 1) {
-                    this.num = 0;
-                }
-                this.btnLi.eq(this.num).addClass('active').siblings('li').removeClass('active');
-                this.picLi.eq(this.num).stop(true).animate({
-                    'opacity': 1
-                }).siblings().stop(true).animate({
-                    'opacity': 0
-                })
-
+            this.num++;
+            if (this.num > this.btnLi.size() - 1) {
+                this.num = 0;
             }
-            // leftclick() {
-            //     this.num--;
-            //     if (this.num < 0) {
-            //         this.num = this.btnLi.size() - 1
-            //     }
-            //     this.btnLi.eq(this.num).addClass('active').siblings('li').removeClass('active');
-            //     this.picLi.eq(this.num).stop(true).animate({
-            //         'opacity': 1
-            //     }).siblings().stop(true).animate({
-            //         'opacity': 0
-            //     })
-            // }
-
+            this.btnLi.eq(this.num).addClass('active').siblings('li').removeClass('active');
+            this.picLi.eq(this.num).stop(true).animate({
+                'opacity': 1
+            }).siblings().stop(true).animate({
+                'opacity': 0
+            })
+        }
     }
     new Banner().init()
+})(jQuery);
+// -------------TV直播轮播--------------
+
+;
+(function($) {
+    class live {
+        constructor() {
+            this.wrap = $('.live_li');
+            this.list = $('.lunbo_start li');
+            this.ul = $('.lunbo_start');
+            this.left = $('.prev');
+            this.right = $('.next');
+        }
+        init() {
+            var _this = this;
+            this.wrap.hover(function() {
+                _this.over()
+            }, function() {
+                _this.out()
+            })
+
+            //计算ul的宽度
+            this.liwidth = this.list.outerWidth(true);
+            this.ul.width(this.list.length * this.liwidth);
+
+            //给左右箭头添加点击事件
+            this.showlength = 3;
+
+            this.right.on('click', function() {
+                _this.rightclick();
+            });
+
+            this.left.on('click', function() {
+                _this.leftclick();
+            });
+
+        }
+        over() {
+            this.left.show();
+            this.right.show();
+        }
+        out() {
+            this.left.hide();
+            this.right.hide();
+        }
+        rightclick() {
+            if (this.list.length > this.showlength) {
+                this.showlength++;
+            }
+            this.ul.animate({
+                left: -(this.showlength - 3) * this.liwidth
+            });
+        }
+        leftclick() {
+            if (this.showlength > 3) {
+                this.showlength--;
+            }
+            this.ul.animate({
+                left: -(this.showlength - 3) * this.liwidth
+            });
+        }
+    }
+    new live().init();
+})(jQuery);
+// -------------------数据渲染---------------------
+;
+(function($) {
+    $.ajax({
+        url: '../php/index.php',
+        dataType: 'json'
+    }).done(function(data) {
+        var $html = '';
+        console.log(data);
+        $.each(data, function(index, value) {
+            $html += `
+                <li style="margin-right:0;">
+                <a href="details.html?sid=${value.sid}" class="a_info" target="_blank">
+                    <div class="img_info">
+                        <p>
+                            <img src="${value.url}">
+                        </p>
+                    </div>
+                    <div class="tit_info">
+                        <p class="p_t">${value.smtitle}</p>
+                        <p class="p_b">${value.title}</p>
+                    </div>
+                    <p class="price_info">
+                        <span class="price1">
+                            ￥<span>${value.price}</span>
+                        </span>
+                    </p>
+                </a>
+            </li>
+			`;
+        });
+        $('.dataul').html($html);
+    });
+})(jQuery);
+// ----------回到顶部----------
+;
+(function($) {
+
+    // class top {
+    //     constructor() {
+    //         this.top1 = $('.totop');
+    //     }
+    //     init() {
+    //         this.top1.on('click', function() {
+    //             $('html,body').animate({
+    //                 scrollTop: 0
+    //             });
+    //         })
+    //     }
+    // }
+    // new top().init();
+
+    var $top = $('.totop')
+    $top.on('click', function() {
+        $('html,body').animate({
+            scrollTop: 0
+        });
+    })
 })(jQuery);

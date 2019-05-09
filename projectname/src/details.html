@@ -36,27 +36,24 @@
                         <div class="sp_big_img clear">
                             <a href="#">
                                 <div class="glass">
-                                    <img src="https://ecimg.happigo.com/data/upload/shop/store/goods/1/291/247791/1_main_247791_1280.jpg">
-                                    <div class="sf"></div>
-                                    <div class="bf"></div>
+                                    <div id="spic">
+                                        <img src="" id="smallpic">
+                                        <div class="sf" id="sf"></div>
+                                    </div>
+                                    <div class="bf" id="bf">
+                                        <div class="bf_out">
+                                            <div class="bf_in">
+                                                <img src="" id="bpic">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </a>
                         </div>
                         <div class="sp_sm_img">
                             <div class="show_img">
                                 <ul class="img_list clear">
-                                    <li class="img_item">
-                                        <a href="#"><img src="https://ecimg.happigo.com/data/upload/shop/store/goods/1/291/247791/1_main_247791_60.jpg"></a>
-                                    </li>
-                                    <li class="img_item">
-                                        <a href="#"><img src="https://ecimg.happigo.com/data/upload/shop/store/goods/1/291/247791/1_05968026034028173_60.jpg"></a>
-                                    </li>
-                                    <li class="img_item">
-                                        <a href="#"><img src="https://ecimg.happigo.com/data/upload/shop/store/goods/1/291/247791/1_05968026059849119_60.jpg"></a>
-                                    </li>
-                                    <li class="img_item">
-                                        <a href="#"><img src="https://ecimg.happigo.com/data/upload/shop/store/goods/1/291/247791/1_05968026063516435_60.jpg"></a>
-                                    </li>
+
                                 </ul>
                             </div>
                             <div class="lr_btn">
@@ -66,7 +63,7 @@
                         </div>
                     </div>
                     <div class="number">
-                        <div class="num">编号：9256764</div>
+                        <div class="num">编号：<em id="numsid"></em></div>
                         <div class="collect">
                             <i></i> 收藏商品
                         </div>
@@ -78,17 +75,19 @@
                         <h1 class="title1">
                             <span>
                                 <em class="eml">[</em>
-                                跟熊猫眼说再见
+                                <strong class="sm_tit"></strong>
                                 <em class="emr">]</em>
-                            </span> （跨境）加拿大TheOrdinary 咖啡因眼部精华30ml
+                            </span>
+                            <strong class="tit"></strong>
+
                         </h1>
                         <h2 class="title2">微博热门推荐产品，美护大神Goss大叔强烈推荐单品！性价比很高的眼部精华，去水肿效果令人惊艳！改善眼部细纹、紧致提亮眼周、消除眼部浮肿；无色素、无香精、无激素。</h2>
                         <div class="price">
                             <div class="price_info clear">
                                 <span class="happy">快乐价</span>
                                 <div class="money">
-                                    <span class="price_now"><em>￥</em>89.00</span>
-                                    <span class="price_del"><del>￥134.00</del></span>
+                                    <em>￥</em>
+                                    <span class="price_now"></span>
                                 </div>
                             </div>
                         </div>
@@ -164,6 +163,7 @@
     <script>
         $('.fixed_right').load('public_html/right_fixed.html');
     </script>
+    <script src="script/js/details.js"></script>
 </body>
 
 </html>
