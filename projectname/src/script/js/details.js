@@ -3,6 +3,19 @@
 ;
 (function() {
 
+    // 右边购物车数量
+    if ($.cookie('cookiesid') && $.cookie('cookienum')) {
+        var $n = $.cookie('cookienum').split(','); //数组num
+        console.log($n);
+        var $sumn = 0;
+        $.each($n, function(i, value) {
+            $sumn += +value
+        })
+        setTimeout(function() {
+            $('.car_num').html($sumn)
+        }, 200)
+    }
+
     var picid = location.search.substring(1).split('=')[1];
 
     $.ajax({
@@ -18,16 +31,18 @@
         $('#numsid').html(data.sid);
         $('.sm_tit').html(data.smtitle);
         $('.tit').html(data.title);
+        $('title').html(data.title); //浏览器标签页标题
         $('.price_now').html(data.price);
         var arr = data.urls.split(',');
-        // console.log(arr);
         var str = '';
         $.each(arr, function(index, value) {
             str += '<li class="img_item"><a href="javascript:;"><img src="' + value + '"/></a></li>';
         });
         $('.img_list').html(str);
-
     });
+
+
+
 })();
 
 // -----------放大镜效果----------
@@ -112,7 +127,7 @@
     var $input = $('.add_sub .text');
     var $num = $input.val();
     $add.on('click', function() {
-        if ($num == 99) {
+        if ($num >= 99) {
             $num == 99
         } else {
             $num++;
@@ -120,12 +135,29 @@
         $input.val($num);
     });
     $reduce.on('click', function() {
-        if ($num == 0) {
-            $num == 0
+        if ($num <= 1) {
+            $num == 1
         } else {
             $num--;
         }
         $input.val($num);
+    });
+
+    //直接输入改变数量
+    $input.on('input', function() {
+        var $reg = /^\d+$/g; //只能输入数字
+        var $value = parseInt($(this).val());
+        if ($reg.test($value)) { //是数字
+            if ($value >= 99) { //限定范围
+                $(this).val(99);
+            } else if ($value <= 0) {
+                $(this).val(1);
+            } else {
+                $(this).val($value);
+            }
+        } else { //不是数字
+            $(this).val(1);
+        }
     });
 
 })();
@@ -182,5 +214,20 @@
                 expires: 7
             })
         }
+
+        // 右边购物车数量
+        if ($.cookie('cookiesid') && $.cookie('cookienum')) {
+            var $n = $.cookie('cookienum').split(','); //数组num
+            console.log($n);
+            var $sumn = 0;
+            $.each($n, function(i, value) {
+                $sumn += +value
+            })
+            setTimeout(function() {
+                $('.car_num').html($sumn)
+            }, 200)
+        }
+
+        alert('添加购物车成功');
     });
 })();

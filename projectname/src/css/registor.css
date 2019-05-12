@@ -27,130 +27,37 @@ img {
   border: 0 none;
   vertical-align: top; }
 
-.registor_l {
+.login_l {
   float: left;
   width: 600px;
   text-align: center;
-  padding-top: 23px; }
+  padding-top: 50px; }
 
-.registor_l img {
-  width: 560px;
-  height: 360px; }
-
-.registor_r {
+.login_r {
   float: left;
-  width: 333px;
-  height: 600px;
+  width: 367px;
+  height: 500px;
   background: url(../img/login_icon_list.png) 0 -115px no-repeat; }
 
-.registor_r {
+.login_r_all {
   padding: 0 33px; }
 
-.registor_r_t {
+.login_r_t {
   padding-top: 23px;
   padding-bottom: 26px; }
-.registor_r_t h2 {
+.login_r_t h2 {
   color: #F11D20;
   font-size: 22px;
   height: 38px;
   line-height: 38px;
   font-weight: bold;
   float: left; }
-.registor_r_t div {
-  float: left;
-  height: 38px;
-  line-height: 38px;
-  margin-left: 50px; }
-.registor_r_t div a {
-  color: #c41f3a; }
-
-.yzmdl {
-  display: none; }
-
-.registor_btn a {
-  display: block;
-  width: 310px;
-  height: 40px;
-  color: #fff;
-  line-height: 40px;
-  background: #F11D20;
-  text-align: center;
-  font-size: 14px;
-  font-family: "宋体";
-  font-weight: bold; }
-
-.error {
-  height: 23px;
-  line-height: 23px;
-  margin-bottom: 3px; }
-
-.error_box {
-  display: none; }
-
-.captcha a {
-  color: #c41f3a;
-  font-size: 12px;
-  text-decoration: none;
-  font-family: "宋体"; }
-
-.item .yzm {
-  width: 157px; }
-
-.remember {
-  margin-bottom: 10px;
-  position: relative;
-  width: 100%;
-  overflow: hidden; }
-.remember .span1 {
-  float: left; }
-.remember .span2 {
+.login_r_t div {
   float: right;
-  padding-right: 26px;
-  padding-top: 1px; }
-.remember .span2 a {
-  color: #595959;
-  font-size: 12px;
-  display: block;
-  text-align: right;
-  outline: 0; }
-
-.reg_type h5 {
-  color: #333;
-  height: 24px;
-  line-height: 24px;
-  font-size: 12px;
-  font-family: "宋体";
-  margin-bottom: 10px; }
-.reg_type li {
-  display: inline-block;
-  margin-right: 10px;
-  vertical-align: top; }
-.reg_type li .qq, .reg_type li .weibo, .reg_type li .zfb {
-  text-indent: -9999px;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background: url(../img/login_icon_list.png) 0 0; }
-.reg_type li .qq {
-  background-position: 0 -32px; }
-.reg_type li .weibo {
-  background-position: -74px -32px; }
-.reg_type li .zfb {
-  background-position: -143px -32px; }
-.reg_type li .weixin {
-  text-indent: 0px;
-  display: block;
-  width: 50px;
-  height: 50px; }
-
-.select {
-  padding-bottom: 10px;
-  text-align: left; }
-.select span {
-  padding-right: 45px; }
-.select span label {
-  padding-left: 5px;
-  vertical-align: middle; }
+  height: 38px;
+  line-height: 38px; }
+.login_r_t div a {
+  color: #c41f3a; }
 
 .login_r_b .item {
   margin-bottom: 10px;
@@ -169,45 +76,31 @@ img {
 .item .yzm {
   width: 157px; }
 
-.a_code {
-  margin-left: 11px;
-  color: #444444;
+.error {
+  height: 32px;
+  line-height: 32px;
+  color: red; }
+
+.login_btn input {
+  display: block;
+  width: 310px;
+  height: 40px;
+  color: #fff;
+  line-height: 40px;
+  background: #F11D20;
+  text-align: center;
+  font-size: 14px;
   font-family: "宋体";
   font-weight: bold;
-  font-size: 12px;
-  text-align: center;
-  outline: 0;
-  display: inline-block;
-  background-color: #f6f6f6;
-  border: 1px solid #c8c8c8;
-  width: 117px;
-  height: 38px;
-  line-height: 38px;
-  vertical-align: top; }
+  outline: none; }
 
-.error {
-  height: 23px;
-  line-height: 23px;
-  margin-bottom: 3px; }
-
-.error_box {
-  display: none; }
-
-.registor_fixed {
-  position: fixed;
-  top: 50%;
-  right: 50%;
-  margin-right: -515px;
-  z-index: 6;
-  margin-top: -135px; }
-.registor_fixed a {
-  display: block;
-  position: relative; }
-.registor_fixed a .two_code {
-  display: none;
-  position: absolute;
-  top: -54px;
-  left: -188px; }
+.agree {
+  padding-top: 5px; }
+.agree lable {
+  color: #767676;
+  padding-left: 6px; }
+.agree lable a {
+  color: #c41f3a; }
 
 .login_footer {
   background-color: #fff;

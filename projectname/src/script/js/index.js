@@ -151,7 +151,6 @@
         dataType: 'json'
     }).done(function(data) {
         var $html = '';
-        console.log(data);
         $.each(data, function(index, value) {
             $html += `
                 <li style="margin-right:0;">
@@ -186,4 +185,22 @@
             scrollTop: 0
         });
     })
+})(jQuery);
+
+;
+(function($) {
+    //显示隐藏
+    $(function() {
+        setTimeout(function() {
+            if ($.cookie('username')) {
+                $('.hello').hide();
+                $('.admin').show().find('span').html('你好,' + $.cookie('username'));
+            }
+            $('.admin a').on('click', function() {
+                $.cookie('username', '', { expires: -1 });
+                $('.admin').hide();
+                $('.hello').show();
+            });
+        }, 200)
+    });
 })(jQuery);
