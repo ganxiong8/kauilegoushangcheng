@@ -21,7 +21,7 @@
 // ------------banner轮播------------
 ;
 (function($) {
-    class Banner {
+    class bannerlunbo {
         constructor() {
             this.banner = $('.banner');
             this.picLi = $('.lunbo_big li');
@@ -77,7 +77,7 @@
             })
         }
     }
-    new Banner().init()
+    new bannerlunbo().init();
 })(jQuery);
 // -------------TV直播轮播--------------
 ;
@@ -157,7 +157,7 @@
                 <a href="details.html?sid=${value.sid}" class="a_info" target="_blank">
                     <div class="img_info">
                         <p>
-                            <img src="${value.url}">
+                            <img class="lazy" data-original="${value.url}" width="256" height="256">
                         </p>
                     </div>
                     <div class="tit_info">
@@ -187,6 +187,7 @@
     })
 })(jQuery);
 
+//-----------登录成功显示用户名----------
 ;
 (function($) {
     //显示隐藏
@@ -203,4 +204,17 @@
             });
         }, 200)
     });
+})(jQuery);
+
+
+//-----------懒加载-----------
+;
+(function($) {
+    setTimeout(function() {
+        $(function() {
+            $("img.lazy").lazyload({
+                effect: "fadeIn"
+            });
+        });
+    }, 200)
 })(jQuery);
