@@ -6,6 +6,7 @@ const uglify = require('gulp-uglify'); //压缩
 const rename = require('gulp-rename'); //重命名
 const watch = require('gulp-watch'); //添加此插件进行监听
 const imagemin = require('gulp-imagemin'); //图片压缩插件
+const babel = require('gulp-babel'); //新增
 
 
 
@@ -34,10 +35,12 @@ gulp.task('runsass', function() {
 
 gulp.task('uglifyjs', function() {
     return gulp.src('src/script/js/*.js')
+        .pipe(babel({ //新增
+            presets: ['es2015']
+        }))
         .pipe(uglify())
         .pipe(gulp.dest('dist/script/js'));
 });
-
 
 gulp.task('runimg', function() {
     return gulp.src('src/img/*.png')
